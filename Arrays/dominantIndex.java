@@ -14,16 +14,20 @@ class Solution {
             }
         }
         
-        System.out.println("Max element is = " + max + "at position " + index);
+        System.out.println("Max element is = " + max + " at position " + index);
         
         //calculate whether its at least > than 2x every other element
         
         for(int j=0;j<nums.length;j++)
         {
-            if(max/nums[j]>=2)
+            
+            System.out.println("Is max element greater than " + nums[j]);
+            
+            if(nums[j]==max)
                 continue;
-            else
+            else if(nums[j]*2>max)
                 return -1;
+            
         }
         return index;
     }
